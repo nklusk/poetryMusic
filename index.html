@@ -1,29 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-  
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>p5.js Template (global version)</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="libraries/p5.min.js"></script>
-    <!-- <script src="libraries/p5.sound.min.js"></script> -->
-  </head>
-
-  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/addons/p5.sound.min.js"></script>
     <script src="https://unpkg.com/hydra-synth"></script>
-<script>
-      // create a new hydra-synth instance
-      var hydra = new Hydra({ detectAudio: false })
-      osc(5, 0.05, 0.001)
-    .kaleid([3,4,5,7,8,9,10].fast(0.1))
-    .color(0.55, 0.29)
-    .colorama(0.9)
-    .modulateRotate(o0,()=>Math.sin(time) * 0.003)
-    .modulate(o0, 0.8)
-    .scale(0.7)
-    .out(o0)
-</script>
-  </body>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
 
+  </head>
+  <body>
+    <canvas id="myCanvas" width="400px" height="400px"></canvas>
+    <script src="sketch.js"></script>
+  </body>
 </html>
