@@ -12,29 +12,23 @@ osc(5, 0.05, 0.001)
 
 let hc, pg;
 
+function preload() {
+  font = loadFont('assets/AppleGaramond.ttf')
+}
+
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(1200, 675);
   hc = select("#myCanvas")
-  // hc.hide()
+  hc.hide()
   background(220);
-  pg = createGraphics(width, height)
+  textInput = createInput()
+  textSize(30)
+  fill('#ffedcf')
+  textFont(font)
 }
 
 function draw() {
-  // if(frameCount%30==0)print(frameRate())
-  pg.image(hc, 0, 0);
-  pg.loadPixels()
-  d = pg.pixelDensity()
-  noStroke()
-  for (let i = 0; i < 2000; i++) {
-    let x = int(random(width));
-    let y = int(random(height));
-    let id = 4 * d * (x + y * width * d)
-    fill(pg.pixels[id+0],pg.pixels[id+1],pg.pixels[id+2])
-    fill(pg.get(x, y))
-    ellipse(x, y, 1);
-  }
-  text("HI", 100, 100)
-  textSize(50)
+  image(hc, 0, 0);
+  text(textInput.value(), 20, 10, 1170, 660)
   
 }
