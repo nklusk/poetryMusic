@@ -1,7 +1,7 @@
 var hydra = new Hydra({
   canvas: document.getElementById("myCanvas")
 })
-osc(5, 0.05, 0.001)
+osc(5, 0.05, 0.003)
 .kaleid([3,4,5,7,8,9,10].fast(0.1))
 .color(0.55, 0.29)
 .colorama(0.9)
@@ -29,6 +29,5 @@ function setup() {
 
 function draw() {
   image(hc, 0, 0);
-  text(textInput.value(), 20, 10, 1170, 660)
-  
+  text(textInput.value(), 20, 10, 1175, 660)
 }
